@@ -7,8 +7,11 @@ hosts_temp = r"C:\Users\HP\Desktop\Python\website_blocker\hosts" # Temp.Hosts fi
 redirect = "127.0.0.1"
 websites_list = ["www.facebook.com","www.netflix.com"]
 
+start_time = datetime.time(8,00)
+end_time = datetime.time(18,00)
+
 while True:
-    if datetime.time(8,00)<=dt.now().time()<= datetime.time(18,00):
+    if start_time <=dt.now().time()<= end_time:
         #print('Working Hours')
         with open(hosts_path,'r+') as file:
             content = file.read()
